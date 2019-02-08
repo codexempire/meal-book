@@ -83,7 +83,6 @@ dropdown-button {
 
 .body {
     max-width: 90%;
-    min-height: 100vh;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
