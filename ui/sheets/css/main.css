@@ -1,11 +1,3 @@
-h1, h2, h3, h4, h5, h6, p {
-    display: block;
-    width: 100%;
-}
-*{
-    padding: 0;
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -23,36 +15,15 @@ body {
     margin: 0;
     font-family: 'Hind', sans-serif;
     font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
     background-color: #fff;
     position: relative;
 }
 
-.form-group {
-    display: flex;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.container {
-    padding: 0 .5rem;
-    max-width: 100%;
-    display: flex;
-    display: -ms-flex;
-    flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-}
-
 .content {
-    flex: 1;
+    flex: 1 0 auto;
 }
-.center{
-    margin-top: 10rem;
-}
-.header-btn{
+
+.header-btn {
     float: right;
     background-color: #cc080800;
     font-size: 1rem;
@@ -61,20 +32,15 @@ body {
     border: none;
     padding: 0 .4rem;
 }
+
 header {
-    padding-left: 1.6rem;
     background-color: #cc0808cc;
     font-size: 1.7rem;
     line-height: 3rem;
     color: #fff;
-}
-
-main {
-    max-width: 100%;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    min-width: 98%;
+    padding-left: 2%;
+    position: fixed;
 }
 
 footer {
@@ -84,15 +50,8 @@ footer {
     margin-top: auto;
 }
 
-input {
-    width: 100%;
-    padding: .2rem;
-    font-size: 1rem;
-    color: #495057;
-    background-color: #ffffff;
-    border: 1px solid #ced4da;
-    border-radius: .2rem;
-    line-height: 1.8rem;
+.down {
+    margin-top: 10rem;
 }
 
 .btn {
@@ -102,44 +61,136 @@ input {
     border-radius: .2rem;
     border: .2rem;
 }
-.btn-red{
+
+.btn-red {
     color: #fff;
     background-color: #cc0808cc;
 }
-.btn-red:hover, .btn-red:focus{
+
+.btn-red:hover, .btn-red:focus {
     color: #fff;
     background-color: #ee0c0ccc;
 }
 
-
-.text-center {
-    text-align: center;
-}
-
-.dropdown-button {
+dropdown-button {
     color: #fff;
     background-color: #cc0808cc;
     border: none;
     margin-right: 1rem;
 }
 
-.hide {
-    display: none;
+/*div sizes control classes*/
+
+.body {
+    max-width: 90%;
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 5% 0 5%;
+    margin: 0 0 100px;
+    min-height: 100%;
 }
 
-.move-1 {
-    margin-left: 25%;
+.flex-length-1, .flex-length-2, .flex-length-3, .flex-length-4, .flex-length-5, .flex-length-6, .flex-length-7, .half-flex-length, .full-flex-length {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
 }
 
-.move-2 {
-    margin-left: 50%;
+.flex-length-move-3, .flex-length-move-2, .flex-length-move-1 {
+    margin-left: 0;
 }
 
-.move-3 {
-    margin-left: 75%;
+@media (min-width:768px) {
+    .flex-length-1 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+    .flex-length-2 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .flex-length-3 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+    .half-flex-length {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .flex-length-5 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .flex-length-6 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .flex-length-7 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .full-flex-length {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .flex-length-move-1 {
+        margin-left: 16.666667%;
+    }
+    .flex-length-move-2 {
+        margin-left: 25%;
+    }
+    .flex-length-move-3 {
+        margin-left: 33.333333%;
+    }
 }
-.box-4{
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
+
+.control {
+    display: flex;
+    flex-wrap: wrap;
+    width: 98.555%;
+    padding: .2rem;
+    font-size: 1rem;
+    line-height: 2;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: .2rem;
+}
+
+@media (max-width:765px) {
+    .forget {
+        margin-left: 50%;
+        font-size: .8rem;
+    }
+}
+
+.form_controller {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media(max-width:767px) {
+    .large {
+        display: none;
+    }
 }
