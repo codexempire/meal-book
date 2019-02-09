@@ -1,3 +1,7 @@
+* {
+    padding: 0;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -41,6 +45,7 @@ header {
     min-width: 98%;
     padding-left: 2%;
     position: fixed;
+    z-index: 1;
 }
 
 footer {
@@ -48,6 +53,7 @@ footer {
     color: #fff;
     font-size: .9rem;
     margin-top: auto;
+    z-index: 1;
 }
 
 .down {
@@ -72,11 +78,22 @@ footer {
     background-color: #ee0c0ccc;
 }
 
-dropdown-button {
+.dropdown-button {
     color: #fff;
-    background-color: #cc0808cc;
+    background-color: #ee0c0ccc;
     border: none;
     margin-right: 1rem;
+}
+
+.add {
+    background-color: #fff;
+    background-image: url('../../images/foodie.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 16rem;
+    width: 100%;
+    position: relative;
+    top: 3rem;
 }
 
 /*div sizes control classes*/
@@ -183,11 +200,13 @@ dropdown-button {
     margin-left: auto;
     font-size: .8rem;
 }
-.forgot a{
+
+.forgot a {
     text-decoration: none;
     color: #ee0c0ccc;
 }
-.forgot a:hover{
+
+.forgot a:hover {
     text-decoration: underline;
     color: #ee0c0ccc;
 }
@@ -195,9 +214,60 @@ dropdown-button {
 .text-center {
     text-align: center;
 }
+text-right{
+    margin-left: 90%;
+}
 
 @media(max-width:767px) {
     .large {
         display: none;
     }
 }
+
+.sidenav {
+    height: 100%;
+    width: 90%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #740303fd;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidenav .logo{
+    width: 100%;
+    line-height: 3rem;
+    padding: 1rem 0 2rem .3rem;
+    background-color: #fff;
+}
+.sidenav a{
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem 0 1rem .2rem;
+}
+.card {
+    float: left;
+    box-shadow: 0 4px 8px 0 #103a03b7;
+    border: 3px solid #103a03b7;
+    margin-left: 4%;
+    border-radius: .3rem;
+    margin-bottom: .8rem;
+    transition: 0.3s;
+    width: 44%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(16, 58, 3, 0.719);
+    border: 1.3px solid rgba(16, 58, 3, 0.719);
+  }
+  
+  .container {
+    padding: 2px 8px;
+  }
+  .cont{
+      position: relative;
+      top: 3.5rem;
+      padding: 0;
+      margin-bottom: 5rem;
+  }
