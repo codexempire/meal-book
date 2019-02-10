@@ -48,6 +48,18 @@ header {
   position: fixed;
   z-index: 1;
 }
+.order table tr .name{
+    width: 50%;
+    text-align: left;
+}
+.order table tr .time{
+    width: 30%;
+    text-align: center;
+}
+.order table tr .buton{
+    width: 20%;
+    text-align: right;
+}
 
 footer {
   background-color: #cc0808cc;
@@ -56,9 +68,15 @@ footer {
   margin-top: auto;
   z-index: 1;
 }
-
+.order{
+    width: 100%;
+    margin-left: 0;
+}
+.order table{
+    width: 100%;
+}
 .down {
-  margin-top: 10rem;
+  margin-top: 3rem;
 }
 
 .btn {

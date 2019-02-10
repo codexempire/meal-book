@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Orders - Cremeals</title>
+    <link rel="stylesheet" href="./sheets/icofonts/icofont.min.css" />
+    <link rel="stylesheet" href="./sheets/css/main.css" />
+  </head>
+  <body>
+    <div class="content">
+      <header class="hide">
+        <span>
+            <button type="button" class="dropdown-button" id="dropdown-button">
+            <i class="icofont-navigation-menu icofont-2x"></i>
+            </button>
+        </span>
+        <strong>Cremeals</strong>
+        <i class="icofont-pizza icon"></i>
+      </header>
+      <!nav!>
+      <nav class="menu large">
+            <ul>
+                <li>
+                    <strong>Cremeals</strong>
+                    <i class="icofont-pizza icon"></i></li>
+                <li><a href="home.html" class="menu-links text-center"><strong>Home</strong></a></li>
+                <li><a href="order.html" class="menu-links text-center">Orders</a></li>
+                <li><a href="history" class="menu-links text-center" id='contestElection'>History</a></li>
+                <li class="log-right"><a href="login.html" class="menu-links text-center">Logout</a></li>
+            </ul>
+        </nav>
+      <!Orders Page!>
+      <!sidemenu!>
+      <div class="sidenav" id="sidenav">
+         <div class="body list">
+            <a href="home.html" class="full-flex-length"><i class="icofont-home"></i> Home</a>
+            <a href="order.html" class="full-flex-length"><i class="icofont-grocery"></i> Orders</a>
+            <a href="history.html" class="full-flex-length"><i class="icofont-history"></i> History</a>
+            <a href="login.html" class="full-flex-length"><i class="icofont-logout"></i> Logout</a>
+         </div>
+      </div>
+      <div class="body down">
+        <h3 class="text-center full-flex-length title">ORDERS</h3>
+        <div class="full-flex-length">
+            <div class="full-flex-length btn order" id="card5">
+                <table>
+                    <tr>
+                        <th class="name">Fries</th>
+                        <th class="time">10:00am</th>
+                        <th class="buton"><button id="change" class="btn"><i class="icofont-edit"></i></button><button id="cancel" class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="full-flex-length btn order" id="card5">
+                <table>
+                    <tr>
+                        <th class="name">Beans and Plantain</th>
+                        <th class="time">10:15am</th>
+                        <th class="buton"><button class="btn"><i class="icofont-edit"></i></button><button class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="full-flex-length btn order" id="card5">
+                <table>
+                    <tr>
+                        <th class="name">Ogbono and Eba</th>
+                        <th class="time">10:40am</th>
+                        <th class="buton"><button class="btn"><i class="icofont-edit"></i></button><button class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="full-flex-length btn order" id="card5">
+                <table>
+                    <tr>
+                        <th class="name">Rice and Beef</th>
+                        <th class="time">10:50am</th>
+                        <th class="buton"><button class="btn"><i class="icofont-edit"></i></button><button class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+      </div>
+      <!modal!>
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content body">
+            <span class="close">&times;</span>
+            <span class="full-flex-length">
+                <h2 class="text-center">Change Order</h2>
+                <form action="">
+                    <div class="form_controller">
+                        <select class="control">
+                            <option value="">Choose New Order</option>
+                            <option value="">Fries</option>
+                            <option value="">Rice and Sauce</option>
+                            <option value="">Ogbonno and Eba</option>
+                        </select>
+                    </div>
+                    <button class="full-flex-length btn btn-red text-center">ORDER</button>
+                </form>
+                
+            </span>
+        </div>
+          
+      </div>
+      <div id="remModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content body">
+            <span class="close">&times;</span>
+            <span class="full-flex-length">
+                <h2 class="text-center">Cancel Order</h2>
+                <p class="text-center">This action cannot be reversed therefore be carefull</p>
+                <div class="btn btn-red text-center">Cancel</div>
+            </span>
+        </div>
+          
+      </div>
+    </div>
+    <!footer!>
+    <footer>
+      <div class="container text-center">
+        <h4><strong>&copy 2019 Cremeals</strong></h4>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="sheets/js/main.js"></script>
+    <script type="text/javascript" src="sheets/js/order.js"></script>
+  </body>
+</html>

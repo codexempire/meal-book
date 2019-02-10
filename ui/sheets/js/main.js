@@ -1,12 +1,12 @@
-//dropdown
+//dropdown for homepage
 const dropdown = document.getElementById("dropdown-button");
 const sidenav = document.getElementById("sidenav");
 dropdown.onclick = function() {
   if (sidenav.style.display === "block") return sidenav.style.display = "none";
   return sidenav.style.display = "block";
 }
-window.onclick = function() {
-  sidenav.style.display = "none";
+window.onclick = (event) => {
+  if (event.target === sidenav) sidenav.style.display = "none";
 }
 // Get the modal
 const modal = document.getElementById('myModal');
