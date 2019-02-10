@@ -7,57 +7,109 @@
     <title>Homepage - Cremeals</title>
     <link rel="stylesheet" href="./sheets/icofonts/icofont.min.css" />
     <link rel="stylesheet" href="./sheets/css/main.css" />
+    <script src="./sheets/javascript/main.js"></script>
   </head>
   <body>
     <div class="content">
-      <header>
-		<button class="dropdown-button">
-		  <i class="icofont-justify-all icofont-2x"></i>
-		</button>
+      <header class="hide">
+        <span>
+            <button type="button" class="dropdown-button" id="dropdown-button">
+            <i class="icofont-navigation-menu icofont-2x"></i>
+            </button>
+        </span>
         <strong>Cremeals</strong>
         <i class="icofont-pizza icon"></i>
       </header>
+      <!nav!>
+      <nav class="menu large">
+            <ul>
+                <li>
+                    <strong>Cremeals</strong>
+                    <i class="icofont-pizza icon"></i></li>
+                <li><a href="home.html" class="menu-links text-center"><strong>Home</strong></a></li>
+                <li><a href="order.html" class="menu-links text-center">Orders</a></li>
+                <li><a href="history" class="menu-links text-center" id='contestElection'>History</a></li>
+                <li class="log-right"><a href="login.html" class="menu-links text-center">Logout</a></li>
+            </ul>
+        </nav>
       <!Homepage!>
       <!sidemenu!>
-      <div class="sidenav">
-        <div class="logo">
-            <span><i class="icofont-businessman icofont-4x"></i></span>
-        </div>
-        <div class="body">
-            <a href="" class="full-flex-length">Home</a>
-            <a href="" class="full-flex-length">Orders</a>
-            <a href="" class="full-flex-length">History</a>
-            <a href="" class="full-flex-length">Logout</a>
-        </div>
+      <div class="sidenav" id="sidenav">
+         <div class="body list">
+            <a href="home.html" class="full-flex-length"><i class="icofont-home"></i> Home</a>
+            <a href="order.html" class="full-flex-length"><i class="icofont-grocery"></i> Orders</a>
+            <a href="history.html" class="full-flex-length"><i class="icofont-history"></i> History</a>
+            <a href="login.html" class="full-flex-length"><i class="icofont-logout"></i> Logout</a>
+         </div>
       </div>
+      
       <!add image!>
-      <div class="add"></div>
+      <div class="add" id="fade"></div>
       <div class="body cont">
-        <div class="full-flex-length">
-            <div class="card text-center">
-                <img src="./script/images/ava3.jpg" alt="Avatar">
-                <div class="container">
-                    <h4><bold>APC</bold></h4> 
-                    <h4><bold>Okafor</bold></h4>
-                    <button class="button button_green">VOTE</button> 
-                </div>
-            </div>
-            <div class="card text-center">
-                <img src="./script/images/ava3.jpg" alt="Avatar">
-                <div class="container">
-                    <h4><bold>APC</bold></h4> 
-                    <h4><bold>Okafor</bold></h4>
-                    <button class="button button_green">VOTE</button> 
-                </div>
-            </div>
-            <div class="card">
-                <img src="./images/foodie.jpg" alt="Avatar" width="100%">
+        <h3 class="text-center full-flex-length title">Food Menu</h3>
+        <div class="full-flex-length card-body">
+            <button class="card" id="card">
+                <img src="./images/food3.jpg" alt="Avatar" width="100%">
                 <div class="container">
                     <p class="text-center">Rice&Fries</p>
-                    <p class="text-right">$40 <i class="icofont-bullet"></i></p> 
+                    <span class="value">$40 <i class="icofont-grocery"></i></span> 
                 </div>
-            </div>
+            </button>
+            <button class="card" id="card1">
+                <img src="./images/food3.jpg" alt="Avatar" width="100%" >
+                <div class="container">
+                    <p class="text-center">Rice&Chicken</p>
+                    <span class="value">$50 <i class="icofont-grocery"></i></span> 
+                </div>
+            </buton>
+            <button class="card" id="card2">
+                <img src="./images/food3.jpg" alt="Avatar" width="100%">
+                <div class="container">
+                    <p class="text-center">Rice&Sauce</p>
+                    <span class="value">$20 <i class="icofont-grocery"></i></span> 
+                </div>
+            </button>
+            <button class="card" id="card3">
+                <img src="./images/food3.jpg" alt="Avatar" width="100%">
+                <div class="container">
+                    <p class="text-center">Chicken</p>
+                    <span class="value">$10 <i class="icofont-grocery"></i></span> 
+                </div>
+            </button>
+            <button class="card" id="card4">
+                <img src="./images/food3.jpg" alt="Avatar" width="100%">
+                <div class="container">
+                    <p class="text-center">Rice&Sauce</p>
+                    <span class="value">$20 <i class="icofont-grocery"></i></span> 
+                </div>
+            </button>
+            <button class="card" id="card5">
+                <img src="./images/food3.jpg" alt="Avatar" width="100%">
+                <div class="container">
+                    <p class="text-center">Chicken</p>
+                    <span class="value">$10 <i class="icofont-grocery"></i></span> 
+                </div>
+            </button>
         </div>
+      </div>
+      <!modal!>
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content body">
+            <span class="close">&times;</span>
+            <div class="full-flex-length"><img src="./images/food6.jpg" alt="Avatar" width="100%"></div>
+            <span class="full-flex-length">
+                <table class="modal-table">
+                    <tr>
+                        <th>Rice & Fries</th>
+                        <th>$50</th>
+                        <th><button type="button" class="btn btn-red">ORDER</button></th>
+                    </tr>
+                </table>
+            </span>
+        </div>
+          
       </div>
     </div>
     <!footer!>
@@ -66,5 +118,7 @@
         <h4><strong>&copy 2019 Cremeals</strong></h4>
       </div>
     </footer>
+
+    <script type="text/javascript" src="sheets/js/main.js"></script>
   </body>
 </html>
