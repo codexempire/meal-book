@@ -308,11 +308,11 @@ footer {
     margin-top: 10rem;
   }
 }
-@media (max-width: 767px) {
+/*@media (max-width: 767px) {
   .large {
     display: none;
   }
-}
+}*/
 
 .control {
   display: flex;
@@ -340,6 +340,9 @@ footer {
     margin-bottom: 0.8rem;
     transition: 0.3s;
     width: 45%;
+  }
+  .downer {
+    margin-top: 10rem;
   }
 }
 
