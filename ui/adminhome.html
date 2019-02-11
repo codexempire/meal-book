@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Administrator Dashboard - Cremeals</title>
+    <link rel="stylesheet" href="./sheets/icofonts/icofont.min.css" />
+    <link rel="stylesheet" href="./sheets/css/main.css" />
+  </head>
+  <body>
+    <div class="content">
+      <header class="hide">
+        <span>
+            <button type="button" class="dropdown-button" id="dropdown-button">
+            <i class="icofont-navigation-menu icofont-2x"></i>
+            </button>
+        </span>
+        <strong>Cremeals</strong>
+        <i class="icofont-pizza icon"></i>
+      </header>
+      <!nav!>
+      <nav class="menu large">
+            <ul>
+                <li>
+                    <strong>Cremeals</strong>
+                    <i class="icofont-pizza icon"></i></li>
+                <li class="log-right"><a href="index.html" class="menu-links text-center">Logout</a></li>
+            </ul>
+        </nav>
+      <!Homepage!>
+      <!sidemenu!>
+      <div class="sidenav" id="sidenav">
+         <div class="body list">
+            <a href="index.html" class="full-flex-length"><i class="icofont-logout"></i> Logout</a>
+         </div>
+      </div>
+      
+      <!add image!>
+      <div class="body cont">
+        <h3 class="text-center full-flex-length title">Welcome <i>to the Administrator Dashboard</i></h3>
+        <div class="full-flex-length card-body down">
+            <button class="card1 card" id="ecard">
+                <img src="./images/food3.jpg" alt="Avatar" width="100%">
+                <div class="container">
+                    <span class="text-center"><i class="icofont-pencil icofont-eraser"></i>Edit menu</s>
+                </div>
+            </button>
+            <button class="card1 card" id="carterer">
+                <img src="./images/food3.jpg" alt="Avatar" width="100%" >
+                <div class="container">
+                    <span class="text-center"><i class="icofont-chef"></i> Add carterer</span> 
+                </div>
+            </button>
+            <button class="card1 card" id="orders">
+                <img src="./images/food3.jpg" alt="Avatar" width="100%">
+                <div class="container">
+                    <span class="text-center"><i class="icofont-list"></i> Veiw Orders</span>
+                </div>
+            </button>
+            <button class="card1 card" id="accounts">
+                <img src="./images/food3.jpg" alt="Avatar" width="100%">
+                <div class="container">
+                    <span class="text-center"><i class="icofont-money-bag"></i> Account</span>
+                </div>
+            </button>
+        </div>
+      </div>
+      <!modal!>
+      <div id="eModal" class="modal1">
+
+        <!-- Modal content -->
+        <div class="modal1-content body">
+            <span class="close"><a href="adminhome.html"><button type="button" class="btn btn-red">Back</button></a></span>
+            <div class="full-flex-length">
+                <h4 class="full-flex-length text-center"><i>Add a Meal to menu</i></h4>
+                <form action="">
+                    <div class="form_controller">
+                        <input type="text" placeholder="Meals Name" class="control">
+                    </div>
+                    <div class="form_controller">
+                        <input type="text" placeholder="Meals Price" class="control">
+                    </div>
+                    <div class="form_controller">
+                        <i>Food Picture</i> <input type="file" class="control">
+                    </div>
+                    <button type="button" class="btn btn-red">Add Meal</button>
+                </form>
+                <h4 class="full-flex-length text-center down"><i>Menu</i></h4>
+                <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <th class="name">Fries</th>
+                                <th class="buton"><button id="change" class="btn"><i class="icofont-edit"></i></button><button id="cancel" class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <th class="name">Beans and Plantain</th>
+                                <th class="buton"><button class="btn"><i class="icofont-edit"></i></button><button class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <th class="name">Ogbono and Eba</th>
+                                <th class="buton"><button class="btn"><i class="icofont-edit"></i></button><button class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <th class="name">Rice and Beef</th>
+                                <th class="buton"><button class="btn"><i class="icofont-edit"></i></button><button class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+        </div>
+
+          
+      </div>
+      <!Add carterer!>
+      <div id="cartererModal" class="modal1">
+
+            <!-- Modal content -->
+            <div class="modal1-content body">
+                <span class="right1"><a href="adminhome.html"><button type="button" class="btn btn-red close">Back</button></a></span>
+                <div class="full-flex-length">
+                    <h4 class="full-flex-length text-center"><i>Add Carterer</i></h4>
+                    <form action="">
+                        <div class="form_controller">
+                            <input type="text" placeholder="Name" class="control">
+                        </div>
+                        <div class="form_controller">
+                            <input type="text" placeholder="Position" class="control">
+                        </div>                        
+                        <div class="form_controller">
+                            <input type="email" placeholder="Email" class="control">
+                        </div>
+                        <div class="form_controller">
+                            <input type="password" placeholder="Password" class="control">
+                        </div>
+                        <button type="button" class="btn btn-red">Add Carterer</button>
+                    </form>
+                    <h4 class="full-flex-length text-center down"><i>Carterers</i></h4>
+                    <div class="full-flex-length btn order" id="card5">
+                            <table>
+                                <tr>
+                                    <th class="name">Benjamin</th>
+                                    <th class="time">Chef</th>
+                                    <th class="buton"><button id="change" class="btn"><i class="icofont-edit"></i></button><button id="cancel" class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="full-flex-length btn order" id="card5">
+                            <table>
+                                <tr>
+                                    <th class="name">Amine</th>
+                                    <th class="time">Server</th>
+                                    <th class="buton"><button class="btn"><i class="icofont-edit"></i></button><button class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="full-flex-length btn order" id="card5">
+                            <table>
+                                <tr>
+                                    <th class="name">Ogbona</th>
+                                    <th class="time">Baker</th>
+                                    <th class="buton"><button class="btn"><i class="icofont-edit"></i></button><button class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="full-flex-length btn order" id="card5">
+                            <table>
+                                <tr>
+                                    <th class="name">Hassana</th>
+                                    <th class="time">Baker</th>
+                                    <th class="buton"><button class="btn"><i class="icofont-edit"></i></button><button class="btn btn-red"><i class="icofont-garbage"></i></button></th>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
+            </div>
+            
+              
+      </div>
+      <!Orders!>
+      <div id="ordersModal" class="modal1">
+
+            <!-- Modal content -->
+            <div class="modal1-content body">
+                <span class="right1"><a href="adminhome.html"><button type="button" class="btn btn-red close">Back</button></a></span>
+                <div class="full-flex-length">
+                    <h4 class="full-flex-length text-center down"><i>Orders</i></h4>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <th class="name">Meal</th>
+                                <th class="time">Customer</th>
+                                <th class="time">Time</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Rice and Sauce</td>
+                                <td class="time">Frank</td>
+                                <td class="time">10:00am</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Rice and Salad</td>
+                                <td class="time">Franklin</td>
+                                <td class="time">10:40am</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Rice and Mash Potatoes</td>
+                                <td class="time">Dan</td>
+                                <td class="time">11:00am</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Rice and Mash Potatoes</td>
+                                <td class="time">Dan</td>
+                                <td class="time">11:00am</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Rice and Mash Potatoes</td>
+                                <td class="time">Dan</td>
+                                <td class="time">11:00am</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Rice and Mash Potatoes</td>
+                                <td class="time">Dan</td>
+                                <td class="time">11:00am</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Rice and Mash Potatoes</td>
+                                <td class="time">Dan</td>
+                                <td class="time">11:00am</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Rice and Mash Potatoes</td>
+                                <td class="time">Dan</td>
+                                <td class="time">11:00am</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Rice and Mash Potatoes</td>
+                                <td class="time">Dan</td>
+                                <td class="time">11:00am</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Rice and Mash Potatoes</td>
+                                <td class="time">Dan</td>
+                                <td class="time">11:00am</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+              
+      </div>
+      <!Account!>
+      <div id="accountsModal" class="modal1">
+
+            <!-- Modal content -->
+            <div class="modal1-content body">
+                <span class="right1"><a href="adminhome.html"><button type="button" class="btn btn-red close">Back</button></a></span>
+                <div class="full-flex-length">
+                    <h4 class="full-flex-length text-center down"><i>Account</i></h4>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <th class="name">Date</th>
+                                <th class="time">Amount Made</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Jan 30 2019</td>
+                                <td class="time">$1000</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Jan 31 2019</td>
+                                <td class="time">$1300</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Feb 01 2019</td>
+                                <td class="time">$900</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Feb 2 2019</td>
+                                <td class="time">$2000</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Feb 3 2019</td>
+                                <td class="time">$500</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="full-flex-length btn order" id="card5">
+                        <table>
+                            <tr>
+                                <td class="name">Feb 4 2019</td>
+                                <td class="time">$400</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+              
+      </div>
+    </div>
+    <!footer!>
+    <footer>
+      <div class="container text-center">
+        <h4><strong>&copy 2019 Cremeals</strong></h4>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="sheets/js/main.js"></script>
+    <script type="text/javascript" src="sheets/js/admin.js"></script>
+  </body>
+</html>
