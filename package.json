@@ -1,0 +1,31 @@
+{
+  "name": "cremeal",
+  "version": "1.0.0",
+  "description": "a meal booking app that enables ordering and delivery of meals",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codexempire/meal-book.git"
+  },
+  "author": "codexempire (michael)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codexempire/meal-book/issues"
+  },
+  "homepage": "https://github.com/codexempire/meal-book#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10"
+  }
+}
