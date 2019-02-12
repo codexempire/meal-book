@@ -3,14 +3,20 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 
+// import
+import route from './server/routes/routes';
+
 // creating a port where the app runs
-const port = process.env.port || 3000;
+const port = process.env.port || 1000;
 
 // initial express
 const app = express();
 
 // use morgan
 app.use(morgan('tiny'));
+
+// use routes
+app.use('/api/v1', route);
 
 // use body parser
 app.use(bodyParser.json());
