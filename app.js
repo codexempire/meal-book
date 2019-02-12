@@ -18,8 +18,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // listen on the port
 app.listen(port, (err) => {
-    if (err) console.log(`Failed to run error: ${err}`);
-    console.log(`Running on ${port}`);
+  if (err) console.log(`Failed to run error: ${err}`);
+  console.log(`Running on ${port}`);
 });
 
 // export the app
