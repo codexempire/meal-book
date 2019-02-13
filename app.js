@@ -7,7 +7,7 @@ import morgan from 'morgan';
 import route from './server/routes/routes';
 
 // creating a port where the app runs
-const port = process.env.port || 1000;
+const port = process.env.port || 500;
 
 // initial express
 const app = express();
@@ -15,12 +15,12 @@ const app = express();
 // use morgan
 app.use(morgan('tiny'));
 
-// use routes
-app.use('/api/v1', route);
-
 // use body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// use routes
+app.use('/api/v1', route);
 
 // listen on the port
 app.listen(port, (err) => {

@@ -11,7 +11,7 @@ import app from '../app';
 chai.use(chaiHttp);
 chai.should();
 
-// testing the get all meal routes
+// testing the get all meal route
 describe('GET all meals', () => {
   it('should return list of all the meals', (done) => {
     chai.request(app)
@@ -26,6 +26,35 @@ describe('GET all meals', () => {
         res.body.data[0].should.have.property('mealUrl');
         res.body.data[0].should.have.property('meal');
         res.body.data[0].should.have.property('price');
+        done(err);
+      });
+  });
+});
+
+// testing the post meal routes
+describe('POST meal', () => {
+  it('should add a meal to data structure', (done) => {
+    chai.request(app)
+      .post('/api/v1/meals/')
+      .send({
+        meal: 'Rice',
+        price: '$50',
+        mealUrl: 'https://www.rend.com',
+      })
+      .end((err, res) => {
+        res.should.have.status(201);
+        res.should.be.a.json;
+        res.should.be.a('object');
+        res.body.should.have.property('data');
+        res.body.data.should.be.a('array');
+        res.body.data[0].should.have.property('id');
+        res.body.data[0].should.have.property('mealUrl');
+        res.body.data[0].should.have.property('meal');
+        res.body.data[0].should.have.property('price');
+        res.body.data[0].id.should.equal(2);
+        res.body.data[0].meal.should.equal('Rice');
+        res.body.data[0].price.should.equal('$50');
+        res.body.data[0].mealUrl.should.equal('https://www.rend.com');
         done(err);
       });
   });
