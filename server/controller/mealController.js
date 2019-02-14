@@ -4,7 +4,7 @@ import verify from '../middleware/mealMiddleware';
 
 // meal controller
 class mealController {
-  // get all meal controller
+  // get all meals controller
   static allMeal(req, res) {
     const meals = mealModel.getAllMeal();
     if (meals) res.status(200).json({ status: 200, data: meals });
@@ -19,6 +19,14 @@ class mealController {
     const created = mealModel.newMeal(meal, price, mealUrl);
     if (created) res.status(201).json({ status: 201, data: [created] });
     res.status(500).json({ status: 500, data: 'Meal already exists' });
+  }
+
+  // remove a meal controller
+  static removeMeal(req, res) {
+    const id = parseInt(req.params.id, 10);
+    const deleted = mealModel.deleteMeal(id);
+    if (deleted) res.status(200).json({ status: 200, data: [deleted] });
+    res.status(404).json({ status: 404, data: 'No meal found' });
   }
 }
 

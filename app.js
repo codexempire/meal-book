@@ -3,7 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 
-// import
+// import routes
 import route from './server/routes/routes';
 
 // creating a port where the app runs
