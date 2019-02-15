@@ -4,6 +4,12 @@ class verify {
     if (!req.body.meal || !req.body.price || !req.body.mealUrl) return true;
     return false;
   }
+
+  // verify the put request form fields for edit meal
+  static edit(req) {
+    if (!req.body.meal || !req.body.price || !req.body.mealUrl) return true;
+    return false;
+  }
 }
 
 export default verify;

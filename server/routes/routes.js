@@ -14,5 +14,8 @@ route.post('/meals/', mealController.addAMeal);
 // route for delete a meal
 route.delete('/meals/:id', mealController.removeMeal);
 
+// route for editing/putting a meal
+route.put('/meals/:id', mealController.putMeal);
+
 // export route
 export default route;

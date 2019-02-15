@@ -83,3 +83,33 @@ describe('DELETE meal', () => {
       });
   });
 });
+
+// testing the put meal route
+describe('PUT meal', () => {
+  it('should put a meal into data structure', (done) => {
+    const id = 1;
+    chai.request(app)
+      .put(`/api/v1/meals/${id}`)
+      .send({
+        meal: 'Rice',
+        price: '$50',
+        mealUrl: 'https://www.rend.com',
+      })
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.should.be.a.json;
+        res.should.be.a('object');
+        res.body.should.have.property('data');
+        res.body.data.should.be.a('array');
+        res.body.data[0].should.have.property('id');
+        res.body.data[0].should.have.property('mealUrl');
+        res.body.data[0].should.have.property('meal');
+        res.body.data[0].should.have.property('price');
+        res.body.data[0].id.should.equal(1);
+        res.body.data[0].meal.should.equal('Rice');
+        res.body.data[0].price.should.equal('$50');
+        res.body.data[0].mealUrl.should.equal('https://www.rend.com');
+        done(err);
+      });
+  });
+});

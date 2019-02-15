@@ -28,6 +28,19 @@ class mealController {
     if (deleted) res.status(200).json({ status: 200, data: [deleted] });
     res.status(404).json({ status: 404, data: 'No meal found' });
   }
+
+  // edit a meal controller
+  static putMeal(req, res) {
+    const error = verify.edit(req);
+    if (error) res.status(400).json({ status: 400, data: 'Failed input fields not filled completely' });
+    const id = parseInt(req.params.id, 10);
+    const { meal, price, mealUrl } = req.body;
+    const change = mealModel.changeMeal(id, meal, price, mealUrl);
+    if (change) {
+      res.status(200).json({ status: 200, data: [change] });
+    }
+    res.status(500).json({ status: 500, data: 'Failed to change meal details' });
+  }
 }
 
 // export meal controller

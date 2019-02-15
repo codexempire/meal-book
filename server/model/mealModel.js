@@ -34,6 +34,18 @@ class mealModel {
     }
     return false;
   }
+
+  // edit a meal model
+  static changeMeal(id, meal, price, mealUrl) {
+    const finder = meals.find(food => food.id === id);
+    if (finder) {
+      finder.meal = meal;
+      finder.price = price;
+      finder.mealUrl = mealUrl;
+      return finder;
+    }
+    return false;
+  }
 }
 
 export default mealModel;
