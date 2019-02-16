@@ -4,10 +4,6 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 
-// coveralls
-require 'coveralls'
-Coveralls.wear!
-
 // import app from app.js
 import app from '../app';
 
