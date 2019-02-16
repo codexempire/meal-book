@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/codexempire/meal-book.svg?branch=develop)](https://travis-ci.org/codexempire/meal-book)
+[![Coverage Status](https://coveralls.io/repos/github/codexempire/meal-book/badge.svg?branch=develop)](https://coveralls.io/github/codexempire/meal-book?branch=develop)
 # meal-book
 A meal booking app
 
