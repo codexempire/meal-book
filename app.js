@@ -7,7 +7,7 @@ import morgan from 'morgan';
 import route from './server/routes/routes';
 
 // creating a port where the app runs
-const port = process.env.port || 500;
+const port = process.env.port || 5000;
 
 // initial express
 const app = express();
