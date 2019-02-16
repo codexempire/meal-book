@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node app.js",
     "lint": "npx eslint . --ext .js",
+    "coverage": "npx nyc report --reporter=text-lcov | npx coveralls",
     "test": "mocha --require babel-polyfill --require babel-register --exit"
   },
   "repository": {
