@@ -10,4 +10,3 @@ branches:
 cache:
   directories:
     - "node_modules"
-after_success: "coveralls"
