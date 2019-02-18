@@ -7,7 +7,7 @@
     "start": "nodemon --exec babel-node app.js",
     "lint": "npx eslint . --ext .js",
     "test": "mocha --require babel-polyfill --require babel-register --exit",
-    "coverage": "npx report --reporter=text-lcov | npx coveralls"
+    "coverage": "npx nyc report --reporter=text-lcov | npx coveralls"
   },
   "repository": {
     "type": "git",
