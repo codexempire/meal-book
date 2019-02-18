@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node app.js",
     "lint": "npx eslint . --ext .js",
-    "coverage": "npx ./node_modules/coveralls/bin/coveralls.js",
+    "coverage": "nyc report -- reporter=text-Icov|coveralls",
     "test": "mocha --require babel-polyfill --require babel-register --exit"
   },
   "repository": {
@@ -31,7 +31,8 @@
     "gemfile": "^1.1.0",
     "mocha": "^5.2.0",
     "morgan": "^1.9.1",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "nyc": "^13.3.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
