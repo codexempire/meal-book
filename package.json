@@ -27,7 +27,6 @@
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
-    "coveralls": "^3.0.2",
     "express": "^4.16.4",
     "gemfile": "^1.1.0",
     "mocha": "^5.2.0",
@@ -37,10 +36,12 @@
     "nyc": "^13.3.0"
   },
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.12.4",
+    "istanbul": "^0.4.5"
   }
 }
